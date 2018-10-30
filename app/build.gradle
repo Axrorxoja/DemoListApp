@@ -8,7 +8,7 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.example.axrorxoja.demolistapp"
-        minSdkVersion 15
+        minSdkVersion 21
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -32,9 +32,8 @@ dependencies {
     implementation "com.squareup.retrofit2:converter-moshi:$retrofit_version"
     implementation "com.jakewharton.timber:timber:$timber_version"
 
-//    debugImplementation "com.readystatesoftware.chuck:library:$chuck_version"
-//    releaseImplementation "com.readystatesoftware.chuck:library-no-op:$chuck_version"
-//    implementation "com.squareup.okhttp3:logging-interceptor:$okhttp_version"
+    debugImplementation "com.readystatesoftware.chuck:library:$chuck_version"
+    releaseImplementation "com.readystatesoftware.chuck:library-no-op:$chuck_version"
 
     //DI container
 //    implementation "com.google.dagger:dagger:$dagger_version"

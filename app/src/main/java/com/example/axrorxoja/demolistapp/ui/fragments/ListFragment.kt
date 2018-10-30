@@ -6,15 +6,15 @@ import android.os.Bundle
 import android.view.View
 import com.example.axrorxoja.demolistapp.R
 import com.example.axrorxoja.demolistapp.presentation.IViewActivity
-import com.example.axrorxoja.demolistapp.presentation.main.IPresenterForgot
-import com.example.axrorxoja.demolistapp.presentation.main.IViewForgot
+import com.example.axrorxoja.demolistapp.presentation.main.IPresenterMain
+import com.example.axrorxoja.demolistapp.presentation.main.IViewMain
 import com.example.axrorxoja.demolistapp.ui.global.BaseDaggerFragment
 import javax.inject.Inject
 
 class ListFragment : BaseDaggerFragment(),
-    IViewForgot {
+    IViewMain {
     override val layoutRes: Int = R.layout.fragment_main
-    @Inject lateinit var presenter: IPresenterForgot
+    @Inject lateinit var presenter: IPresenterMain
     @Inject
     lateinit var activityView: IViewActivity
 
@@ -27,7 +27,7 @@ class ListFragment : BaseDaggerFragment(),
     private fun onForgot() {
 //        btn_forgot.hideKeyboard()
 //        btn_forgot.isEnabled = false
-//        presenter.forgot(
+//        presenter.loadList(
 //            ti_first_name.text(),
 //            ti_last_name.text(),
 //            ti_login.text()

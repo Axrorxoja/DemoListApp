@@ -1,7 +1,6 @@
 package com.example.axrorxoja.demolistapp.extension
 
 import android.content.Context
-import android.support.annotation.StringRes
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 
@@ -14,8 +13,6 @@ fun View.changeVisibility(isVisible: Boolean) {
 }
 
 //fun View.showSnackbar(@StringRes textId: Int) = Snackbar.make(this, textId, Snackbar.LENGTH_SHORT).show()
-
-//fun TextInputEditText.text(): String = text.toString()
 
 fun View.hideKeyboard(): Boolean {
     try {
