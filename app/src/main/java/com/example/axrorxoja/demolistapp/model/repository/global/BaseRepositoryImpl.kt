@@ -3,7 +3,8 @@ package com.example.axrorxoja.demolistapp.model.repository.global
 import com.example.axrorxoja.demolistapp.entity.global.BaseData
 import com.example.axrorxoja.demolistapp.extension.await
 import com.example.axrorxoja.demolistapp.widget.SingleLiveEvent
-import kotlinx.coroutines.experimental.Job
+import kotlinx.coroutines.Job
+
 import retrofit2.Call
 import timber.log.Timber
 

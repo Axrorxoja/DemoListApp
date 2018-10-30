@@ -4,7 +4,6 @@ import com.example.axrorxoja.demolistapp.App
 import com.example.axrorxoja.demolistapp.common.API_URL
 import com.example.axrorxoja.demolistapp.di.scope.AppScope
 import com.example.axrorxoja.demolistapp.model.repository.global.ApiService
-import com.readystatesoftware.chuck.ChuckInterceptor
 import com.squareup.moshi.Moshi
 import dagger.Module
 import dagger.Provides
@@ -27,7 +26,7 @@ class NetModule {
     @Provides
     fun provideHttpClient(context: App): OkHttpClient {
         return OkHttpClient.Builder()
-            .addInterceptor(ChuckInterceptor(context))
+//            .addInterceptor(ChuckInterceptor(context))
             .build()
     }
 

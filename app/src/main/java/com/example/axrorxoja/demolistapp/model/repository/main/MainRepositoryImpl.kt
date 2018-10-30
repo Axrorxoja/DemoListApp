@@ -6,9 +6,9 @@ import com.example.axrorxoja.demolistapp.entity.main.MainResponse
 import com.example.axrorxoja.demolistapp.model.repository.global.ApiService
 import com.example.axrorxoja.demolistapp.model.repository.global.BaseRepositoryImpl
 import com.example.axrorxoja.demolistapp.widget.SingleLiveEvent
-import kotlinx.coroutines.experimental.GlobalScope
-import kotlinx.coroutines.experimental.Job
-import kotlinx.coroutines.experimental.launch
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.launch
 
 class MainRepositoryImpl(private val service: ApiService) :
     BaseRepositoryImpl<MainResponse>(),
@@ -18,9 +18,10 @@ class MainRepositoryImpl(private val service: ApiService) :
     override val liveData by lazy { SingleLiveEvent<BaseData<MainResponse>>() }
 
     override fun loadList(): LiveData<BaseData<MainResponse>> {
+        cancelAll()
         job = GlobalScope.launch {
-            //            val data = parseData(service.loadList(request))
-//            liveData.postValue(data)
+            val data = parseData(service.loadList())
+            liveData.postValue(data)
         }
         return liveData
     }
