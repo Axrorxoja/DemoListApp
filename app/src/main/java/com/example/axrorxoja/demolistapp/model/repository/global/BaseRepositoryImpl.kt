@@ -17,14 +17,14 @@ abstract class BaseRepositoryImpl<T> :
     abstract var job: Job?
     abstract val liveData: SingleLiveEvent<BaseData<T>>
 
-    protected suspend fun parseData(call: Call<BaseData<T>>): BaseData<T> {
+    protected suspend fun parseData(call: Call<T>): BaseData<T> {
         return try {
             val res = call.await()
             Timber.d("$res")
-            return res
+            return BaseData(res)
         } catch (e: Exception) {
             e.printStackTrace()
-            BaseData()
+            BaseData(error = e)
         }
     }
 

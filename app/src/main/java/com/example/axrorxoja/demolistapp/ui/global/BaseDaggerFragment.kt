@@ -11,8 +11,7 @@ abstract class BaseDaggerFragment :
     BaseFragment(),
     HasSupportFragmentInjector {
 
-    @Inject
-    lateinit var childFragmentInjector: DispatchingAndroidInjector<Fragment>
+    @Inject lateinit var childFragmentInjector: DispatchingAndroidInjector<Fragment>
 
     override fun onAttach(context: Context?) {
         AndroidSupportInjection.inject(this)

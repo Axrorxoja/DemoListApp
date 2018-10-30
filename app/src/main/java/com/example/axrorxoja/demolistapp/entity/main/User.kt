@@ -12,12 +12,14 @@ name: "Aleksandr800",
 nick: "Aleksandr800",
 iurl: "http://dating.mts.by//dating-images-by/web/images/f4/4f/68/92/00/92/55/7a/f44f68920092557a51611ff6f753e67d_100_100_new_square.jpg",
 online: false,
+lastVisit: "23.08.2018",
+sex: 1
+
 age: "29 лет",
 city: "г. Гродно",
 aim: "Цель знакомства: Любовь, Страсть, Брак",
 moderator: false,
-lastVisit: "23.08.2018",
-sex: 1
+
 }*/
 
 class User(

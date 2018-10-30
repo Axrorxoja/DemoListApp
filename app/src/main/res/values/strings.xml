@@ -4,4 +4,6 @@
     <string name="network_not_available">Network not available</string>
     <string name="un_known_error">Unknown error</string>
     <string name="data_is_empty">data is empty</string>
+    <string name="service_not_available">service not available</string>
+    <string name="none" />
 </resources>

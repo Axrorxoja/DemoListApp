@@ -2,12 +2,13 @@ package com.example.axrorxoja.demolistapp.presentation.global
 
 import android.arch.lifecycle.LifecycleOwner
 import android.support.annotation.StringRes
+import android.view.View
 
-interface IViewBase {
+interface IViewBase<T> {
 
     fun lifeCycle(): LifecycleOwner
 
-    fun onSuccess()
+    fun onSuccess(data: T)
 
     fun onFail(@StringRes stringRes: Int)
 

@@ -9,21 +9,19 @@ import com.example.axrorxoja.demolistapp.widget.connectionManager.IConnectionMan
 
 class MainPresenter(
     private val repo: IMainRepository,
-    private val view: IViewMain,
+    private val view: IViewMain<MainResponse>,
     private val connection: IConnectionManager
 ) : BasePresenter<MainResponse>(view), IPresenterMain {
 
     override fun loadList() {
         if (connection.isHaveNetwork()) {
             view.onShowProgress(true)
-            repo.loadList().observe(view.lifeCycle(),
-                Observer { checkData(it) })
+            repo.loadList().observe(
+                view.lifeCycle(),
+                Observer { checkData(it) }
+            )
         } else {
             view.onFail(R.string.network_not_available)
         }
-    }
-
-    override fun onSuccess(data: MainResponse) {
-        super.onSuccess(data)
     }
 }

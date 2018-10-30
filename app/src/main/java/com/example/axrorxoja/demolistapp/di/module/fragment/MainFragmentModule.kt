@@ -1,6 +1,7 @@
 package com.example.axrorxoja.demolistapp.di.module.fragment
 
 import com.example.axrorxoja.demolistapp.di.scope.MainFragmentScope
+import com.example.axrorxoja.demolistapp.entity.main.MainResponse
 import com.example.axrorxoja.demolistapp.model.repository.global.ApiService
 import com.example.axrorxoja.demolistapp.model.repository.main.IMainRepository
 import com.example.axrorxoja.demolistapp.model.repository.main.MainRepositoryImpl
@@ -26,12 +27,12 @@ class MainFragmentModule {
     @MainFragmentScope
     fun providePresenter(
         repo: IMainRepository,
-        view: IViewMain,
+        view: IViewMain<MainResponse>,
         connection: IConnectionManager
     ): IPresenterMain = MainPresenter(repo, view, connection)
 
 
     @Provides
     @MainFragmentScope
-    fun provideView(fragment: ListFragment): IViewMain = fragment
+    fun provideView(fragment: ListFragment): IViewMain<MainResponse> = fragment
 }

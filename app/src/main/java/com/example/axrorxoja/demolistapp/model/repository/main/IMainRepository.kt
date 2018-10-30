@@ -11,4 +11,5 @@ import com.example.axrorxoja.demolistapp.model.repository.global.IBaseRepository
 interface IMainRepository : IBaseRepository {
 
     fun loadList(): LiveData<BaseData<MainResponse>>
+
 }

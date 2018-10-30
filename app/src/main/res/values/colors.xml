@@ -3,4 +3,7 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="offline">#cec8ca</color>
+    <color name="online">#3bac33</color>
+    <color name="sts_color">#daca13</color>
 </resources>

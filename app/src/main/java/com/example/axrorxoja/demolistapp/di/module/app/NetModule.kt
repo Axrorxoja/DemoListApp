@@ -1,6 +1,5 @@
 package com.example.axrorxoja.demolistapp.di.module.app
 
-import com.example.axrorxoja.demolistapp.App
 import com.example.axrorxoja.demolistapp.common.API_URL
 import com.example.axrorxoja.demolistapp.di.scope.AppScope
 import com.example.axrorxoja.demolistapp.model.repository.global.ApiService
@@ -24,7 +23,7 @@ class NetModule {
 
     @AppScope
     @Provides
-    fun provideHttpClient(context: App): OkHttpClient {
+    fun provideHttpClient(): OkHttpClient {
         return OkHttpClient.Builder()
 //            .addInterceptor(ChuckInterceptor(context))
             .build()
